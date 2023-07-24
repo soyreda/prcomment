@@ -1,0 +1,36 @@
+{
+    "manifestVersion": 1,
+    "id": "pr-extension",
+    "name": "PR COMMENT",
+    "version": "0.0.2",
+    "publisher": "reda",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Tool to add a comment in a specific pull request!",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/pr.png"        
+    },
+    "files": [
+        {
+            "path": "buildandreleasetask"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "custom-build-release-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "buildandreleasetask"
+            }
+        }
+    ]
+}
